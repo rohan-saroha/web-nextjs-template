@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Button type="primary">Button</Button>
-      <Typography id='wednesday_solutions'/>
+      <Typography id="sample" />
       <Counter />
     </div>
   );

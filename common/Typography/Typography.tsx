@@ -1,13 +1,13 @@
 import React, { CSSProperties } from "react";
 import { HTMLAttributes } from "react";
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from "react-intl";
 import If from "common/If/If";
 
 type TypographyTypes = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "pre";
 
 interface Props extends HTMLAttributes<any> {
-  id:string;
-  values:any;
+  id: string;
+  values: any;
   /**
    * @property type
    * html element to render
@@ -43,7 +43,7 @@ export type TypographyProps = Props;
 //     ${lineHeight ? `line-height: ${lineHeight}px;` : ""};
 //     ${letterSpacing ? `letter-spacing: ${letterSpacing}px` : ""};
 //     :focus-visible {
-//       outline: 1px solid ${theme.colors.primary2}; 
+//       outline: 1px solid ${theme.colors.primary2};
 //     }
 //     font-family: inherit;
 //   `}
@@ -102,13 +102,15 @@ export type TypographyProps = Props;
 //   }
 // };
 
-const Typography = ({ id,values,type, text, ...rest }: Props) => {
+const Typography = ({ id, values, type, text, ...rest }: Props) => {
   // const Element: StyledComponent<TypographyTypes, any> = getElementByType(type || "h3");
-  return (<div {...rest}>
-    <If condition={id} otherwise={text}>
-    <FormattedMessage id={id} values={values} />
-    </If>
-    </div>);
+  return (
+    <div {...rest}>
+      <If condition={id} otherwise={text}>
+        <FormattedMessage id={id} values={values} />
+      </If>
+    </div>
+  );
 };
 
 Typography.propTypes = {};
@@ -116,7 +118,7 @@ Typography.propTypes = {};
 Typography.defaultProps = {
   type: "h3",
   text: "",
-  values:{}
+  values: {},
 };
 
 export default Typography;
