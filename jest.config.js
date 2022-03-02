@@ -13,10 +13,7 @@ module.exports = {
       // https://jestjs.io/docs/webpack#handling-static-assets
       "^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$": `<rootDir>/__mocks__/fileMock.js`,
       "^store(.*)": "<rootDir>/store/$1",
-      "@utils(.*)": "<rootDir>/utils/$1",
-      "^utils(.*)": "<rootDir>/utils/$1",
       "@styles(.*)": "<rootDir>/styles",
-      "@common(.*)": "<rootDir>/common",
       "common(.*)": "<rootDir>/common",
       "@logger(.*)": "<rootDir>/logger",
       "@constants(.*)": "<rootDir>/constants",
@@ -24,7 +21,6 @@ module.exports = {
       "^features(.*)": "<rootDir>/features/$1",
       "^hooks(.*)": "<rootDir>/hooks/$1",
       "^@shared(.*)": "<rootDir>/features/sharedComponents/$1",
-      "^analyticsUtils(.*)": "<rootDir>/analyticsUtils/$1",
     },
     setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
     testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/.next/"],
